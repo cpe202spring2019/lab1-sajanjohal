@@ -1,4 +1,4 @@
-# Sajan Johal attempt 2
+# Sajan Johal
 
 
 def max_list_iter(int_list):  # must use iteration not recursion
