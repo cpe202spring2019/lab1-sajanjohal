@@ -11,7 +11,7 @@ def max_list_iter(int_list):
     elif int_list is None:
         raise ValueError
 
-    max_val = -10000000
+    max_val = -1000000000000
     for i in range(len(int_list)):
         if int_list[i] == list:
             for j in range(len(int_list[i])):

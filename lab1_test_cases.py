@@ -21,6 +21,11 @@ class TestLab1(unittest.TestCase):
         l1 = []
         self.assertIsNone(max_list_iter(l1))
 
+    def test_max_list_iter_4(self):
+        """tests function with negative value lists"""
+        l1 = [-2, -5, -19999, -123123]
+        self.assertEqual(max_list_iter(l1), -2)
+
     def test_reverse_rec_1(self):
         """passes list and checks if reversed is returned"""
         input_list = [1, 2, 3]
@@ -66,6 +71,21 @@ class TestLab1(unittest.TestCase):
         low = 2
         high = 5
         self.assertEqual(bin_search(4, low, high, list_val), 3)
+
+    def test_bin_search_5(self):
+        """This test checks if lower boundary is included"""
+        list_val = [1, 2, 3, 4, 5]
+        low = 0
+        high = 2
+        self.assertEqual(bin_search(1, low, high, list_val), 0)
+
+    def test_bin_search_6(self):
+        """This test checks if upper boundary is excluded"""
+        list_val = [1, 2, 3, 4, 5]
+        low = 0
+        high = 2
+        with self.assertRaises(ValueError):
+            bin_search(3, low, high, list_val)
 
 
 if __name__ == "__main__":
