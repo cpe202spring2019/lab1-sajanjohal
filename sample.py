@@ -16,7 +16,7 @@ def fib(n):
         return fib(n-1) + fib(n-2)
 
 
-def maxlist_rec(tlist):   # returns max of a list of numbers
+def maxlist_rec(tlist):
     if len(tlist) == 0:
         raise ValueError('empty list')
     elif len(tlist) == 1:
