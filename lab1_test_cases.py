@@ -26,6 +26,11 @@ class TestLab1(unittest.TestCase):
         l1 = [-2, -5, -19999, -123123]
         self.assertEqual(max_list_iter(l1), -2)
 
+    def test_max_list_iter_5(self):
+        """tests function with a 2D list"""
+        l1 = [-2, -5, [1, 100], 22]
+        self.assertEqual(max_list_iter(l1), 100)
+
     def test_reverse_rec_1(self):
         """passes list and checks if reversed is returned"""
         input_list = [1, 2, 3]

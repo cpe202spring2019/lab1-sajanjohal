@@ -22,11 +22,11 @@ def max_list_iter(int_list):
 
     max_val = -1000000000000
     for i in range(len(int_list)):
-        if int_list[i] == list:
+        if type(int_list[i]) == list:
             for j in range(len(int_list[i])):
                 if int_list[i][j] > max_val:
                     max_val = int_list[i][j]
-        else:
+        elif type(int_list[i]) == int:
             if int_list[i] > max_val:
                 max_val = int_list[i]
     return max_val
